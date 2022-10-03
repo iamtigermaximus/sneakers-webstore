@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import {
   NavbarContainer,
   MenuContainer,
@@ -18,20 +19,34 @@ const Navbar = () => {
       <MenuContainer>
         <TopNav>
           <BrandContainer>
-            <BrandLinkItem>sneakers</BrandLinkItem>
+            <Link to='/'>
+              <BrandLinkItem>sneakers</BrandLinkItem>
+            </Link>
           </BrandContainer>
           <Input placeholder='Search' />
           <LinkItemContainer>
-            <LinkItem>Limited Offer!</LinkItem>
+            <Link to='/limited-offer'>
+              <LinkItem>Limited Offer!</LinkItem>
+            </Link>
           </LinkItemContainer>
         </TopNav>
         <BottomNav>
           <NavbarLinksContainer>
-            <NavbarLink>AIRFORCE</NavbarLink>
-            <NavbarLink>JORDAN</NavbarLink>
-            <NavbarLink>BLAZER</NavbarLink>
-            <NavbarLink>CRATER</NavbarLink>
-            <NavbarLink>HIPPIE</NavbarLink>
+            <Link to='/airforce'>
+              <NavbarLink>AIRFORCE</NavbarLink>
+            </Link>
+            <Link to='/jordan'>
+              <NavbarLink>JORDAN</NavbarLink>
+            </Link>
+            <Link to='/blazer'>
+              <NavbarLink>BLAZER</NavbarLink>
+            </Link>
+            <Link to='/crater'>
+              <NavbarLink>CRATER</NavbarLink>
+            </Link>
+            <Link to='/hippie'>
+              <NavbarLink>HIPPIE</NavbarLink>
+            </Link>
           </NavbarLinksContainer>
         </BottomNav>
       </MenuContainer>

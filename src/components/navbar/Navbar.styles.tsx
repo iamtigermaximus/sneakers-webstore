@@ -63,7 +63,11 @@ export const NavbarLinksContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   white-space: wrap;
-  color: ${colors.darkGray};
+
+  > a {
+    text-decoration: none;
+    color: ${colors.darkGray};
+  }
 
   @media (min-width: ${bp.lg}) {
     margin-bottom: 20px;

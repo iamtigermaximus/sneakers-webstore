@@ -61,6 +61,11 @@ export const NavbarLinksContainer = styled.div`
 export const NavbarLink = styled.h1`
   font-size: 10px;
 
+  &:hover {
+    color: ${colors.green};
+    cursor: pointer;
+  }
+
   @media (min-width: ${bp.md}) {
     font-size: 16px;
   }
@@ -79,6 +84,11 @@ export const BrandLinkItem = styled.h1`
   color: ${colors.offWhite};
   font-size: 20px;
   letter-spacing: 0.1rem;
+
+  &:hover {
+    color: ${colors.green};
+    cursor: pointer;
+  }
 
   @media (min-width: ${bp.md}) {
     font-size: 30px;
@@ -103,6 +113,11 @@ export const LinkItem = styled.h1`
   border-bottom: 2px solid ${colors.green};
   display: flex;
   align-items: center;
+
+  &:hover {
+    color: ${colors.green};
+    cursor: pointer;
+  }
 
   @media (min-width: ${bp.md}) {
     white-space: nowrap;

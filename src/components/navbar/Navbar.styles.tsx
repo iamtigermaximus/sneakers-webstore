@@ -13,7 +13,7 @@ export const NavbarContainer = styled.nav`
   position: fixed;
   z-index: 1;
 
-  @media (min-width: ${bp.lg}) {
+  @media (min-width: ${bp.md}) {
     height: 20vh;
   }
 `
@@ -113,10 +113,12 @@ export const LinkItem = styled.h1`
   font-size: 13px;
   letter-spacing: 0.1rem;
   border-bottom: 2px solid ${colors.green};
+  display: flex;
+  align-items: center;
 
   @media (min-width: ${bp.md}) {
-    white-space: no-wrap;
-    font-size: 20px;
+    white-space: nowrap;
+    font-size: 16px;
   }
 `
 

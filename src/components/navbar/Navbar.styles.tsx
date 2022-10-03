@@ -7,52 +7,40 @@ export const NavbarContainer = styled.nav`
   height: 10vh;
   background: ${colors.matteBlack};
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  align-items: center;
   position: fixed;
   z-index: 1;
-
-  @media (min-width: ${bp.md}) {
-    height: 20vh;
-  }
 `
 export const MenuContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 10px;
-  width: 100%;
-
-  @media (min-width: ${bp.md}) {
-    padding: 20px;
-    margin: 20px;
-  }
-
-  @media (min-width: ${bp.lg}) {
-    margin: 0 30px;
-  }
-`
-export const TopNav = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   margin: 10px;
+  padding: 0 10px;
+
+  @media (min-width: ${bp.lg}) {
+    padding: 0px 30px;
+  }
 `
 export const BottomNav = styled.div`
   width: 100%;
+  height: 50px;
+  background: ${colors.matteBlack};
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 10px;
+  padding: 10px 30px;
 
   @media (min-width: ${bp.sm}) {
-    padding: 10px 70px;
+    padding: 10px 100px;
   }
 
   @media (min-width: ${bp.lg}) {
-    padding: 10px 100px;
+    padding: 10px 300px;
   }
 `
 
@@ -60,7 +48,7 @@ export const NavbarLinksContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   white-space: wrap;
 
@@ -68,17 +56,13 @@ export const NavbarLinksContainer = styled.div`
     text-decoration: none;
     color: ${colors.darkGray};
   }
-
-  @media (min-width: ${bp.lg}) {
-    margin-bottom: 20px;
-  }
 `
 
 export const NavbarLink = styled.h1`
   font-size: 10px;
 
-  @media (min-width: ${bp.lg}) {
-    font-size: 20px;
+  @media (min-width: ${bp.md}) {
+    font-size: 16px;
   }
 `
 export const BrandContainer = styled.div`
@@ -146,9 +130,6 @@ export const Input = styled.input`
 
   @media (min-width: ${bp.md}) {
     width: 300px;
-    margin: 10px;
-  }
-  @media (min-width: ${bp.lg}) {
     padding: 10px;
   }
 `

@@ -14,7 +14,7 @@ export const NavbarContainer = styled.nav`
   z-index: 1;
 
   @media (min-width: ${bp.lg}) {
-    height: 15vh;
+    height: 20vh;
   }
 `
 export const MenuContainer = styled.div`
@@ -25,7 +25,7 @@ export const MenuContainer = styled.div`
   width: 100%;
 
   @media (min-width: ${bp.md}) {
-    padding: 0 20px;
+    padding: 20px;
     margin: 20px;
   }
 

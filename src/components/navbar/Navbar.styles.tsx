@@ -3,14 +3,11 @@ import { breakpoints as bp } from '../../utils/layout'
 import colors from '../../utils/colors'
 
 export const NavbarContainer = styled.nav`
-  width: 100vw;
-  height: 10vh;
-  background: ${colors.matteBlack};
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  background-color: #111;
+  color: white;
+  padding: 20px 50px;
   position: fixed;
+  width: 100vw;
   z-index: 1;
 `
 export const MenuContainer = styled.div`
@@ -27,13 +24,9 @@ export const MenuContainer = styled.div`
   }
 `
 export const BottomNav = styled.div`
-  width: 100%;
-  height: 50px;
-  background: ${colors.matteBlack};
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 10px 30px;
+  align-items: center;
+  justify-content: center;
 
   @media (min-width: ${bp.sm}) {
     padding: 10px 100px;

@@ -1,12 +1,18 @@
 import styled from 'styled-components'
+import Hero from '../components/hero/Hero'
 
 const Container = styled.div`
-  background: pink;
-  padding-top: 20vh;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 100px;
 `
 
 const Home = () => {
-  return <Container>Home Page</Container>
+  return (
+    <Container>
+      <Hero />
+    </Container>
+  )
 }
 
 export default Home

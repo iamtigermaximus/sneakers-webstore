@@ -11,6 +11,7 @@ import {
   ImageContainer,
   Image,
 } from './NewArrivals.styles'
+import { Link } from 'react-router-dom'
 
 const NewArrivals = () => {
   return (
@@ -21,7 +22,9 @@ const NewArrivals = () => {
             <Texts>
               <h1>NEW ARRIVALS</h1>WINTER COLLECTION
               <ButtonContainer>
-                <Button>Check collections</Button>
+                <Link to='/new-arrivals'>
+                  <Button>Check collections</Button>
+                </Link>
               </ButtonContainer>
             </Texts>
           </ContentContainer>

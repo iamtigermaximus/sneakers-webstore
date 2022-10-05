@@ -100,4 +100,9 @@ export const Button = styled.button`
   width: 200px;
   padding: 15px;
   border-radius: 5px;
+
+  &:hover {
+    background: darkGray;
+    cursor: pointer;
+  }
 `

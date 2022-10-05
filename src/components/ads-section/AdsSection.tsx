@@ -12,6 +12,7 @@ import {
 import AdImage1 from '../../assets/adssection.jpg'
 import AdImage2 from '../../assets/adssection2.jpg'
 import AdImage3 from '../../assets/adssection3.jpg'
+import { Link } from 'react-router-dom'
 
 const AdsSection = () => {
   return (
@@ -22,7 +23,9 @@ const AdsSection = () => {
             <Texts>
               CHOOSE YOUR STYLE
               <ButtonContainer>
-                <Button>Check collections</Button>
+                <Link to='/products'>
+                  <Button>Check collections</Button>
+                </Link>
               </ButtonContainer>
             </Texts>
           </ContentContainer>

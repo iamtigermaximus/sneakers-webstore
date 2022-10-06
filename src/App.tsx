@@ -4,8 +4,13 @@ import Home from './pages/Home'
 import Products from './pages/Products'
 import LimitedOfferPage from './pages/LimitedOfferPage'
 import NewArrivals from './pages/NewArrivals'
+import Airforce from './pages/Airforce'
+import Blazer from './pages/Blazer'
+import Crater from './pages/Crater'
+import Jordan from './pages/Jordan'
+import Hippie from './pages/Hippie'
 
-//import Footer from './components/footer/Footer'
+import Footer from './components/footer/Footer'
 
 function App() {
   return (
@@ -16,8 +21,13 @@ function App() {
         <Route path='/products' element={<Products />} />
         <Route path='/limited-offer' element={<LimitedOfferPage />} />
         <Route path='/new-arrivals' element={<NewArrivals />} />
+        <Route path='/airforce' element={<Airforce />} />
+        <Route path='/blazer' element={<Blazer />} />
+        <Route path='/crater' element={<Crater />} />
+        <Route path='/jordan' element={<Jordan />} />
+        <Route path='/hippie' element={<Hippie />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </Router>
   )
 }

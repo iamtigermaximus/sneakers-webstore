@@ -16,8 +16,6 @@ export const MenuContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 10px;
-  padding: 0 10px;
 
   @media (min-width: ${bp.lg}) {
     padding: 0px 30px;

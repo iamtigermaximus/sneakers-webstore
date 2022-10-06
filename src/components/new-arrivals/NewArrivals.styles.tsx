@@ -4,7 +4,7 @@ import { breakpoints as bp } from '../../utils/layout'
 
 export const NewArrivalsContainer = styled.div`
   width: 100%;
-  padding: 30px 0;
+  padding: 60px 0;
   background: black;
 `
 

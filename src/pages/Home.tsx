@@ -2,10 +2,10 @@ import styled from 'styled-components'
 import Hero from '../components/hero/Hero'
 import AdsSection from '../components/ads-section/AdsSection'
 import NewArrivals from '../components/new-arrivals/NewArrivals'
+import Newsletter from '../components/newsletter/Newsletter'
 
 const Container = styled.div`
   width: 100vw;
-  height: 100vh;
   padding-top: 100px;
 `
 
@@ -15,6 +15,7 @@ const Home = () => {
       <Hero />
       <AdsSection />
       <NewArrivals />
+      <Newsletter />
     </Container>
   )
 }

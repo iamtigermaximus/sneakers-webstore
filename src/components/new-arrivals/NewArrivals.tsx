@@ -20,7 +20,7 @@ const NewArrivals = () => {
         <ArrivalTextsContainer>
           <ContentContainer>
             <Texts>
-              <h1>NEW ARRIVALS</h1>WINTER COLLECTION
+              <h3>NEW ARRIVALS</h3>WINTER COLLECTION
               <ButtonContainer>
                 <Link to='/new-arrivals'>
                   <Button>Check collections</Button>

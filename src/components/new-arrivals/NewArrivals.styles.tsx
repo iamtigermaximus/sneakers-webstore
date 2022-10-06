@@ -44,6 +44,7 @@ export const ArrivalTextsContainer = styled.div`
   padding: 10px;
   background: #32de84;
   font-size: 13px;
+  order: 1;
 
   @media (min-width: ${bp.sm}) {
     width: 400px;
@@ -58,6 +59,7 @@ export const ArrivalTextsContainer = styled.div`
     width: 250px;
     height: 300px;
     display: block;
+    order: 4;
   }
   @media (min-width: ${bp.xxl}) {
     width: 500px;

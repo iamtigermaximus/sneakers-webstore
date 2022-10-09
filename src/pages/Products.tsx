@@ -95,7 +95,7 @@ export const Button = styled.button`
 
 const Products = () => {
   const [sneakers, setSneakers] = useState<SneakerType[]>([])
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     setIsLoading(true)

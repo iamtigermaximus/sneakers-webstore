@@ -11,6 +11,7 @@ import Jordan from './pages/Jordan'
 import Hippie from './pages/Hippie'
 
 import Footer from './components/footer/Footer'
+import ProductDetails from './pages/ProductDetails'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/products' element={<Products />} />
+        <Route path='/product-details/:id' element={<ProductDetails />} />
         <Route path='/limited-offer' element={<LimitedOfferPage />} />
         <Route path='/new-arrivals' element={<NewArrivals />} />
         <Route path='/airforce' element={<Airforce />} />

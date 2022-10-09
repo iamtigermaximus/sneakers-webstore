@@ -5,7 +5,7 @@ import colors from '../../utils/colors'
 export const NavbarContainer = styled.nav`
   background-color: #111;
   color: white;
-  padding: 20px 50px;
+  padding: 30px 50px;
   position: fixed;
   width: 100vw;
   z-index: 1;

@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { breakpoints as bp } from '../../utils/layout'
+import { Link } from 'react-router-dom'
 
 export const CardContainer = styled.div`
   width: 250px;
@@ -71,4 +72,8 @@ export const Button = styled.button`
   &:hover {
     background: lightGreen;
   }
+`
+export const ProductDetailsLink = styled(Link)`
+  text-decoration: none;
+  color: black;
 `

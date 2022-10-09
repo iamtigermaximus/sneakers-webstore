@@ -9,6 +9,7 @@ export const NavbarContainer = styled.nav`
   position: fixed;
   width: 100vw;
   z-index: 1;
+  margin-bottom: 30px;
 `
 export const MenuContainer = styled.div`
   width: 100%;

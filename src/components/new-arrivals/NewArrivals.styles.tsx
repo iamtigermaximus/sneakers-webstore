@@ -51,9 +51,8 @@ export const ArrivalTextsContainer = styled.div`
   }
 
   @media (min-width: ${bp.md}) {
-    width: 150px;
+    width: 100%;
     height: 200px;
-    display: none;
   }
   @media (min-width: ${bp.lg}) {
     width: 250px;

@@ -5,11 +5,20 @@ import { breakpoints as bp } from '../utils/layout'
 
 export const ProductsContainer = styled.div`
   width: 100vw;
-  padding-top: 100px;
+   padding 80px 0 150px;
   height: 100%;
 `
+export const Header = styled.div`
+  color: black;
+  background: green;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
 
-export const Test = styled.div`
+export const ProductsListContainer = styled.div`
   color: black;
   display: flex;
   flex-direction: row;
@@ -63,7 +72,8 @@ const Products = () => {
   console.log(sneakers)
   return (
     <ProductsContainer>
-      <Test>
+      <Header>HEADER</Header>
+      <ProductsListContainer>
         {sneakers.map((sneaker: any) => {
           return (
             <div>
@@ -74,7 +84,7 @@ const Products = () => {
             </div>
           )
         })}
-      </Test>
+      </ProductsListContainer>
     </ProductsContainer>
   )
 }

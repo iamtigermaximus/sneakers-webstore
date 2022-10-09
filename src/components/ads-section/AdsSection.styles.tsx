@@ -58,9 +58,8 @@ export const AdsTextsContainer = styled.div`
   }
 
   @media (min-width: ${bp.md}) {
-    width: 150px;
+    width: 100%;
     height: 200px;
-    display: none;
   }
   @media (min-width: ${bp.lg}) {
     width: 250px;
@@ -70,7 +69,6 @@ export const AdsTextsContainer = styled.div`
 
   @media (min-width: ${bp.xxl}) {
     width: 500px;
-    order: 4;
   }
 `
 export const ContentContainer = styled.div`

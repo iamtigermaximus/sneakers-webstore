@@ -1,7 +1,7 @@
 import Navbar from './components/navbar/Navbar'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
-import Products from './pages/Products'
+import Products from './pages/products/Products'
 import LimitedOfferPage from './pages/LimitedOfferPage'
 import NewArrivals from './pages/NewArrivals'
 import Airforce from './pages/Airforce'

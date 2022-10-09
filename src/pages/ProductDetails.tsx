@@ -2,7 +2,12 @@ import { useState, useEffect } from 'react'
 import { Container, Header } from '../components/common/Common.styles'
 import { useParams } from 'react-router'
 import axios from 'axios'
-import { Button, CardContainer, Name, Price } from './Products'
+import {
+  Button,
+  CardContainer,
+  Name,
+  Price,
+} from '../components/product-card/ProductCard.styles'
 import styled from 'styled-components'
 
 type Sneaker = {

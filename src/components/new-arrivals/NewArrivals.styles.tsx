@@ -78,7 +78,7 @@ export const ContentContainer = styled.div`
   height: 100%;
   padding: 10px;
 `
-export const Texts = styled.h1`
+export const Texts = styled.div`
   color: #303030;
   width: 100%;
   height: 100%;

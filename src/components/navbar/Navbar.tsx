@@ -30,6 +30,9 @@ const Navbar = () => {
       </MenuContainer>
       <BottomNav>
         <NavbarLinksContainer>
+          <Link to='/products'>
+            <NavbarLink>SHOP</NavbarLink>
+          </Link>
           <Link to='/airforce'>
             <NavbarLink>AIRFORCE</NavbarLink>
           </Link>

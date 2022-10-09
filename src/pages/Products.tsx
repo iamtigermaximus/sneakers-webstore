@@ -3,21 +3,15 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { breakpoints as bp } from '../utils/layout'
 import { Circles } from 'react-loader-spinner'
-import NikeHeader from '../assets/nike-header.jpg'
+import { Container, Header } from '../components/common/Common.styles'
+import ProductCard from '../components/product-card/ProductCard'
 
-export const ProductsContainer = styled.div`
-  width: 100vw;
-   padding 80px 0 150px;
-  height: 100%;
-`
-export const Header = styled.div`
-  width: 100%;
-  height: 200px;
-  background-image: url(${NikeHeader});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-`
+type SneakerType = {
+  _id: string
+  name: string
+  shoeImage: string
+  price: number
+}
 
 export const ProductsListContainer = styled.div`
   color: black;
@@ -27,7 +21,7 @@ export const ProductsListContainer = styled.div`
   justify-content: center;
   align-items: center;
 `
-export const ImageContainer = styled.div`
+export const CardContainer = styled.div`
   width: 250px;
   height: 350px;
   margin: 20px;
@@ -60,6 +54,10 @@ export const Name = styled.h1`
   @media (min-width: ${bp.sm}) {
     font-size: 10px;
   }
+
+  @media (min-width: ${bp.md}) {
+    font-size: 13px;
+  }
 `
 export const Price = styled.h1`
   display: flex;
@@ -70,6 +68,9 @@ export const Price = styled.h1`
 
   @media (min-width: ${bp.sm}) {
     font-size: 10px;
+  }
+  @media (min-width: ${bp.md}) {
+    font-size: 13px;
   }
 `
 
@@ -85,10 +86,15 @@ export const Button = styled.button`
   padding: 5px;
   width: 100%;
   border-radius: 5px;
+  background: white;
+
+  &:hover {
+    background: lightGreen;
+  }
 `
 
 const Products = () => {
-  const [sneakers, setSneakers] = useState([])
+  const [sneakers, setSneakers] = useState<SneakerType[]>([])
   const [isLoading, setIsLoading] = useState(false)
 
   useEffect(() => {
@@ -102,7 +108,7 @@ const Products = () => {
   }, [])
   console.log(sneakers)
   return (
-    <ProductsContainer>
+    <Container>
       <Header>HEADER</Header>
       {isLoading ? (
         <LoaderContainer>
@@ -118,21 +124,20 @@ const Products = () => {
         </LoaderContainer>
       ) : (
         <ProductsListContainer>
-          {sneakers.map((sneaker: any) => {
+          {sneakers.map((sneaker) => {
             return (
-              <div>
-                <ImageContainer>
-                  <Image src={sneaker.shoeImage} />
-                  <Name>{sneaker.name}</Name>
-                  <Price> € {sneaker.price}</Price>
-                  <Button>BUY</Button>
-                </ImageContainer>
-              </div>
+              <ProductCard
+                key={sneaker._id}
+                id={sneaker._id}
+                shoeImage={sneaker.shoeImage}
+                name={sneaker.name}
+                price={sneaker.price}
+              />
             )
           })}
         </ProductsListContainer>
       )}
-    </ProductsContainer>
+    </Container>
   )
 }
 

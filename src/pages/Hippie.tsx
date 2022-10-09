@@ -1,12 +1,11 @@
-import styled from 'styled-components'
+import { Container, Header } from '../components/common/Common.styles'
 
-const Container = styled.div`
-  width: 100vw;
-  padding-top: 100px;
-  height: 100vh;
-`
 const Hippie = () => {
-  return <Container>Hippie</Container>
+  return (
+    <Container>
+      <Header>Hippie</Header>
+    </Container>
+  )
 }
 
 export default Hippie

@@ -1,13 +1,11 @@
-import styled from 'styled-components'
-
-const Container = styled.div`
-  width: 100vw;
-  padding-top: 100px;
-  height: 100vh;
-`
+import { Container, Header } from '../components/common/Common.styles'
 
 const Jordan = () => {
-  return <Container>Jordan</Container>
+  return (
+    <Container>
+      <Header>Jordan</Header>
+    </Container>
+  )
 }
 
 export default Jordan

@@ -1,14 +1,9 @@
-import styled from 'styled-components'
+import { Container, Header } from '../components/common/Common.styles'
 
-const Container = styled.div`
-  width: 100vw;
-  padding-top: 100px;
-  height: 100vh;
-`
 const Airforce = () => {
   return (
     <Container>
-      <h1>Hello</h1>
+      <Header>Airforce</Header>
     </Container>
   )
 }

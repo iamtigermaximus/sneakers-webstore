@@ -1,13 +1,11 @@
-import styled from 'styled-components'
-
-const Container = styled.div`
-  width: 100vw;
-  padding-top: 100px;
-  height: 100vh;
-`
+import { Container, Header } from '../components/common/Common.styles'
 
 const Crater = () => {
-  return <Container>Crater</Container>
+  return (
+    <Container>
+      <Header>Crater</Header>
+    </Container>
+  )
 }
 
 export default Crater

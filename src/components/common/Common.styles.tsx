@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import NikeHeader from '../assets/nike-header.jpg'
+import NikeHeader from '../../assets/nike-header.jpg'
 
-const Container = styled.div`
+export const Container = styled.div`
 width: 100vw;
 padding 80px 0 150px;
 height: 100%;
@@ -15,13 +15,3 @@ export const Header = styled.div`
   background-position: center;
   background-repeat: no-repeat;
 `
-
-const LimitedOfferPage = () => {
-  return (
-    <Container>
-      <Header>LimitedOfferPage</Header>
-    </Container>
-  )
-}
-
-export default LimitedOfferPage

@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { breakpoints as bp } from '../utils/layout'
+import { Circles } from 'react-loader-spinner'
+import NikeHeader from '../assets/nike-header.jpg'
 
 export const ProductsContainer = styled.div`
   width: 100vw;
@@ -9,13 +11,12 @@ export const ProductsContainer = styled.div`
   height: 100%;
 `
 export const Header = styled.div`
-  color: black;
-  background: green;
   width: 100%;
   height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-image: url(${NikeHeader});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 `
 
 export const ProductsListContainer = styled.div`
@@ -28,27 +29,22 @@ export const ProductsListContainer = styled.div`
 `
 export const ImageContainer = styled.div`
   width: 250px;
-  height: 300px;
-  margin: 10px 20px;
+  height: 350px;
+  margin: 20px;
 
   @media (min-width: ${bp.sm}) {
-    width: 400px;
-    height: 450px;
-  }
-
-  @media (min-width: ${bp.md}) {
-    width: 150px;
-    height: 200px;
+    width: 200px;
+    height: 250px;
   }
 
   @media (min-width: ${bp.lg}) {
     width: 250px;
-    height: 300px;
+    height: 350px;
   }
 `
 export const Image = styled.img`
   width: 100%;
-  height: 100%;
+  height: 70%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -56,35 +52,86 @@ export const Image = styled.img`
 
 export const Name = styled.h1`
   display: flex;
-  font-size: 16px;
+  font-size: 13px;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+
+  @media (min-width: ${bp.sm}) {
+    font-size: 10px;
+  }
+`
+export const Price = styled.h1`
+  display: flex;
+  font-size: 13px;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+
+  @media (min-width: ${bp.sm}) {
+    font-size: 10px;
+  }
+`
+
+export const LoaderContainer = styled.div`
+  z-index: 1;
+  display: flex;
   justify-content: center;
   align-items: center;
 `
+
+export const Button = styled.button`
+  border: 1px solid gray;
+  padding: 5px;
+  width: 100%;
+  border-radius: 5px;
+`
+
 const Products = () => {
   const [sneakers, setSneakers] = useState([])
+  const [isLoading, setIsLoading] = useState(false)
+
   useEffect(() => {
+    setIsLoading(true)
     axios
       .get(
         'https://sneakers-webstore-backend-170cw4kuz-iamtigermaximus.vercel.app/'
       )
       .then((response) => setSneakers(response.data.items))
+    setIsLoading(false)
   }, [])
   console.log(sneakers)
   return (
     <ProductsContainer>
       <Header>HEADER</Header>
-      <ProductsListContainer>
-        {sneakers.map((sneaker: any) => {
-          return (
-            <div>
-              <ImageContainer>
-                <Image src={sneaker.shoeImage} />
-              </ImageContainer>
-              <Name>{sneaker.name}</Name>
-            </div>
-          )
-        })}
-      </ProductsListContainer>
+      {isLoading ? (
+        <LoaderContainer>
+          <Circles
+            height='80'
+            width='80'
+            color='#4fa94d'
+            ariaLabel='circles-loading'
+            wrapperStyle={{}}
+            wrapperClass=''
+            visible={true}
+          />
+        </LoaderContainer>
+      ) : (
+        <ProductsListContainer>
+          {sneakers.map((sneaker: any) => {
+            return (
+              <div>
+                <ImageContainer>
+                  <Image src={sneaker.shoeImage} />
+                  <Name>{sneaker.name}</Name>
+                  <Price> € {sneaker.price}</Price>
+                  <Button>BUY</Button>
+                </ImageContainer>
+              </div>
+            )
+          })}
+        </ProductsListContainer>
+      )}
     </ProductsContainer>
   )
 }

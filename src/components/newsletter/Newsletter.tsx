@@ -1,51 +1,12 @@
-import styled from 'styled-components'
-import { breakpoints as bp } from '../../utils/layout'
-
-const NewsletterSectionContainer = styled.div`
-  width: 100%;
-  padding: 40px 10px;
-  background: white;
-
-  @media (min-width: ${bp.sm}) {
-    padding: 60px;
-  }
-`
-const NewsletterContent = styled.div`
-  width: 100%;
-  background: #f8f8f8;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-
-  @media (min-width: ${bp.sm}) {
-    flex-direction: row;
-  }
-`
-const LeftContent = styled.div`
-  width: 100%;
-  height: 100%;
-  padding: 20px 10px;
-  margin: 10px 0;
-`
-const RightContent = styled.div`
-  width: 100%;
-  height: 100%;
-  padding: 20px 10px;
-  margin: 10px 0;
-`
-const InputContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  @media (min-width: ${bp.lg}) {
-    padding: 0 30px;
-    width: 500px;
-  }
-`
-const Input = styled.input`
-  padding: 10px;
-`
-const Label = styled.h4``
+import {
+  Input,
+  InputContainer,
+  Label,
+  LeftContent,
+  NewsletterContent,
+  NewsletterSectionContainer,
+  RightContent,
+} from './Newsletter.styles'
 
 const Newsletter = () => {
   return (

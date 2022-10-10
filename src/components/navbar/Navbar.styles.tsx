@@ -102,14 +102,8 @@ export const LinkItem = styled.h1`
   margin: 10px;
   font-size: 13px;
   letter-spacing: 0.1rem;
-  border-bottom: 2px solid ${colors.green};
   display: flex;
   align-items: center;
-
-  &:hover {
-    color: ${colors.green};
-    cursor: pointer;
-  }
 
   @media (min-width: ${bp.md}) {
     white-space: nowrap;

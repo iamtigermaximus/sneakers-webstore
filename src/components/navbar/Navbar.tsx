@@ -11,6 +11,7 @@ import {
   BottomNav,
   NavbarLink,
 } from './Navbar.styles'
+import { FaUser, FaShoppingCart } from 'react-icons/fa'
 
 const Navbar = () => {
   return (
@@ -23,8 +24,18 @@ const Navbar = () => {
         </BrandContainer>
         <Input placeholder='Search' />
         <LinkItemContainer>
-          <Link to='/limited-offer'>
+          {/* <Link to='/limited-offer'>
             <LinkItem>Limited Offer!</LinkItem>
+          </Link> */}
+          <Link to='/'>
+            <LinkItem>
+              <FaUser />
+            </LinkItem>
+          </Link>
+          <Link to='/'>
+            <LinkItem>
+              <FaShoppingCart />
+            </LinkItem>
           </Link>
         </LinkItemContainer>
       </MenuContainer>

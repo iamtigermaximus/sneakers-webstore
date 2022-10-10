@@ -7,6 +7,10 @@ export const CardContainer = styled.div`
   height: 350px;
   margin: 20px;
 
+  &:hover {
+    transform: scale(1.02);
+  }
+
   @media (min-width: ${bp.sm}) {
     width: 200px;
     height: 250px;

@@ -16,14 +16,14 @@ type ProductType = {
 
 const ProductCard: React.FC<ProductType> = ({ id, shoeImage, name, price }) => {
   return (
-    <ProductDetailsLink to={`/product-details/${id}`}>
-      <CardContainer key={id}>
+    <CardContainer key={id}>
+      <ProductDetailsLink to={`/product-details/${id}`}>
         <Image src={shoeImage} />
         <Name>{name}</Name>
         <Price> € {price}</Price>
-        <Button>BUY</Button>
-      </CardContainer>
-    </ProductDetailsLink>
+      </ProductDetailsLink>
+      <Button>BUY</Button>
+    </CardContainer>
   )
 }
 

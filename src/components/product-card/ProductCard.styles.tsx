@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 export const CardContainer = styled.div`
   width: 250px;
   height: 350px;
-  margin: 20px;
+  margin: 10px;
 
   &:hover {
     transform: scale(1.02);

@@ -1,14 +1,16 @@
 import { useState, useEffect } from 'react'
-import { Container, Header } from '../components/common/Common.styles'
+import { Container, Header } from '../../components/common/Common.styles'
 import { useParams } from 'react-router'
 import axios from 'axios'
+import { Button } from '../../components/product-card/ProductCard.styles'
 import {
-  Button,
-  CardContainer,
+  Description,
+  DetailsContainer,
   Name,
   Price,
-} from '../components/product-card/ProductCard.styles'
-import styled from 'styled-components'
+  SingleProductContainer,
+  Image,
+} from './ProductDetails.styles'
 
 type Sneaker = {
   id: string
@@ -17,14 +19,6 @@ type Sneaker = {
   price: number
   description: string
 }
-
-export const Image = styled.img`
-  width: 100%;
-  height: 70%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-`
 
 const ProductDetails = () => {
   const params = useParams()
@@ -38,21 +32,21 @@ const ProductDetails = () => {
       .then((response) => setSneaker(response.data))
       .catch((error) => console.log(error))
   }, [params.id])
-  console.log('product details!!!!', params)
   return (
     <Container>
       <Header>Product Details</Header>
       <div>
         {sneaker && (
           <>
-            <CardContainer key={sneaker.id}>
-              <Image src={sneaker.shoeImage} />
-              <Name>{sneaker.name}</Name>
-              <Price> € {sneaker.price}</Price>
-              <p>{sneaker.description}</p>
-
-              <Button>BUY</Button>
-            </CardContainer>
+            <SingleProductContainer key={sneaker.id}>
+              <Image src={sneaker.shoeImage} alt='shoes image' />
+              <DetailsContainer>
+                <Name>{sneaker.name}</Name>
+                <Price> € {sneaker.price}</Price>
+                <Description>{sneaker.description}</Description>
+                <Button>BUY</Button>
+              </DetailsContainer>
+            </SingleProductContainer>
           </>
         )}
       </div>

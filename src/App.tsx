@@ -11,7 +11,7 @@ import Jordan from './pages/Jordan'
 import Hippie from './pages/Hippie'
 
 import Footer from './components/footer/Footer'
-import ProductDetails from './pages/ProductDetails'
+import ProductDetails from './pages/product-details/ProductDetails'
 
 function App() {
   return (

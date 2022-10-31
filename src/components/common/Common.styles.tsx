@@ -5,7 +5,7 @@ import { breakpoints as bp } from '../../utils/layout'
 export const Container = styled.div`
 width: 100vw;
 padding 40px 0 150px;
-height: 100vh;
+height: 100%;
 
 @media (min-width: ${bp.md}) {
   padding :80px 0 150px;

@@ -32,7 +32,7 @@ const Navbar = () => {
               <FaUser />
             </LinkItem>
           </Link>
-          <Link to='/'>
+          <Link to='/cart'>
             <LinkItem>
               <FaShoppingCart />
             </LinkItem>

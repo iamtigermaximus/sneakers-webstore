@@ -12,6 +12,7 @@ import Hippie from './pages/Hippie'
 
 import Footer from './components/footer/Footer'
 import ProductDetails from './pages/product-details/ProductDetails'
+import Cart from './pages/cart/Cart'
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path='/crater' element={<Crater />} />
         <Route path='/jordan' element={<Jordan />} />
         <Route path='/hippie' element={<Hippie />} />
+        <Route path='/cart' element={<Cart />} />
       </Routes>
       <Footer />
     </Router>

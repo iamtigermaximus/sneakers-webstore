@@ -34,7 +34,8 @@ const ProductDetails = () => {
   }, [params.id])
   return (
     <Container>
-      <Header>Product Details</Header>
+      <Header />
+      <div>Product Details</div>
       <div>
         {sneaker && (
           <>
@@ -44,7 +45,7 @@ const ProductDetails = () => {
                 <Name>{sneaker.name}</Name>
                 <Price> € {sneaker.price}</Price>
                 <Description>{sneaker.description}</Description>
-                <Button>BUY</Button>
+                <Button>ADD TO CART</Button>
               </DetailsContainer>
             </SingleProductContainer>
           </>

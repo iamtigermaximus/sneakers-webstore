@@ -3,7 +3,8 @@ import { Container, Header } from '../components/common/Common.styles'
 const LimitedOfferPage = () => {
   return (
     <Container>
-      <Header>LimitedOfferPage</Header>
+      <Header />
+      <div>Limited Offer Page</div>
     </Container>
   )
 }

@@ -3,7 +3,8 @@ import { Container, Header } from '../components/common/Common.styles'
 const Hippie = () => {
   return (
     <Container>
-      <Header>Hippie</Header>
+      <Header />
+      <div>Hippie Page</div>
     </Container>
   )
 }

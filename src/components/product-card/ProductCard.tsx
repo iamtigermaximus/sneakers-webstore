@@ -6,6 +6,7 @@ import {
   Button,
   ProductDetailsLink,
 } from './ProductCard.styles'
+import { useCart } from 'react-use-cart'
 
 type ProductType = {
   id: string
@@ -14,15 +15,17 @@ type ProductType = {
   price: number
 }
 
-const ProductCard: React.FC<ProductType> = ({ id, shoeImage, name, price }) => {
+const ProductCard: React.FC<ProductType> = (props: any) => {
+  const { addItem } = useCart()
+
   return (
-    <CardContainer key={id}>
-      <ProductDetailsLink to={`/product-details/${id}`}>
-        <Image src={shoeImage} />
-        <Name>{name}</Name>
-        <Price> € {price}</Price>
+    <CardContainer key={props.id}>
+      <ProductDetailsLink to={`/product-details/${props.id}`}>
+        <Image src={props.shoeImage} />
+        <Name>{props.name}</Name>
+        <Price> € {props.price}</Price>
       </ProductDetailsLink>
-      <Button>BUY</Button>
+      <Button onClick={() => addItem(props.item)}>ADD TO CART</Button>
     </CardContainer>
   )
 }

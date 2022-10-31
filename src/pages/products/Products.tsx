@@ -28,7 +28,8 @@ const Products = () => {
   console.log(sneakers)
   return (
     <Container>
-      <Header>HEADER</Header>
+      <Header />
+      <div>Products</div>
       {isLoading ? (
         <LoaderContainer>
           <Circles

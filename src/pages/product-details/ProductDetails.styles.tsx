@@ -26,8 +26,10 @@ export const Image = styled.img`
 
 export const DetailsContainer = styled.div`
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  background: #f8f8f8;
 
   @media (min-width: ${bp.md}) {
     width: 300px;

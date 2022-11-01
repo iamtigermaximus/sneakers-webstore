@@ -3,8 +3,8 @@ import { breakpoints as bp } from '../../utils/layout'
 import { Link } from 'react-router-dom'
 
 export const CardContainer = styled.div`
-  width: 250px;
-  height: 350px;
+  width: 300px;
+  height: 400px;
   margin: 10px;
 
   &:hover {

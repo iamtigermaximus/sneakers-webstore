@@ -1,5 +1,10 @@
 import { useState, useEffect } from 'react'
-import { Container, Header } from '../../components/common/Common.styles'
+import {
+  Container,
+  Header,
+  BackContainer,
+  BackButton,
+} from '../../components/common/Common.styles'
 import { useParams } from 'react-router'
 import axios from 'axios'
 import { Button } from '../../components/product-card/ProductCard.styles'
@@ -11,6 +16,7 @@ import {
   SingleProductContainer,
   Image,
 } from './ProductDetails.styles'
+import { useNavigate } from 'react-router-dom'
 
 type Sneaker = {
   id: string
@@ -23,6 +29,7 @@ type Sneaker = {
 const ProductDetails = () => {
   const params = useParams()
   const [sneaker, setSneaker] = useState<Sneaker>()
+  const navigate = useNavigate()
 
   useEffect(() => {
     axios
@@ -35,7 +42,11 @@ const ProductDetails = () => {
   return (
     <Container>
       <Header />
-      <div>Product Details</div>
+      <BackContainer>
+        <BackButton onClick={() => navigate('/products')}>
+          Shop / Product Details
+        </BackButton>
+      </BackContainer>
       <div>
         {sneaker && (
           <>

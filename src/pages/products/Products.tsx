@@ -1,7 +1,13 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Circles } from 'react-loader-spinner'
-import { Container, Header } from '../../components/common/Common.styles'
+import {
+  Container,
+  Header,
+  BackContainer,
+  BackButton,
+} from '../../components/common/Common.styles'
 import ProductCard from '../../components/product-card/ProductCard'
 import { LoaderContainer, ProductsListContainer } from './Products.styles'
 
@@ -15,6 +21,7 @@ type SneakerType = {
 const Products = () => {
   const [sneakers, setSneakers] = useState<SneakerType[]>([])
   const [isLoading, setIsLoading] = useState(true)
+  const navigate = useNavigate()
 
   useEffect(() => {
     setIsLoading(true)
@@ -29,7 +36,9 @@ const Products = () => {
   return (
     <Container>
       <Header />
-      <div>Products</div>
+      <BackContainer>
+        <BackButton onClick={() => navigate('/')}>Home / Shop</BackButton>
+      </BackContainer>
       {isLoading ? (
         <LoaderContainer>
           <Circles

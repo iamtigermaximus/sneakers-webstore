@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { breakpoints as bp } from '../../utils/layout'
 import { Link } from 'react-router-dom'
+import colors from '../../utils/colors'
 
 export const CardContainer = styled.div`
   width: 300px;
@@ -74,7 +75,7 @@ export const Button = styled.button`
   background: white;
 
   &:hover {
-    background: lightGreen;
+    background: ${colors.lightGray};
   }
 `
 export const ProductDetailsLink = styled(Link)`

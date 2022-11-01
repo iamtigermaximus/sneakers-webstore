@@ -27,3 +27,14 @@ export const Header = styled.div`
   background-position: center;
   background-repeat: no-repeat;
 `
+
+export const BackContainer = styled.div`
+  margin: 30px;
+  padding: 10px;
+`
+
+export const BackButton = styled.button`
+  cursor: pointer;
+  border: none;
+  background: none;
+`

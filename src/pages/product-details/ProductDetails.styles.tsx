@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { breakpoints as bp } from '../../utils/layout'
+import colors from '../../utils/colors'
 
 export const SingleProductContainer = styled.div`
   padding: 20px;
@@ -29,7 +30,7 @@ export const DetailsContainer = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  background: #f8f8f8;
+  background: ${colors.lightGray};
 
   @media (min-width: ${bp.md}) {
     width: 300px;
